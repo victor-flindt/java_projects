@@ -13,6 +13,8 @@
         private int maxWords;
         private String[] ArrayOfWords;
 
+
+        //TEST IN TEXTANALYSIS
         
         // constructor
         public TextAnalysis(String sourceFileName, int maxNoOfWords) {
