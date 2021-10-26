@@ -5,7 +5,7 @@
     import java.util.Scanner;
     import java.util.Set;
 
-    public class TextAnalysis1 {
+    public class TextAnalysis {
 
         // Encapsulated fields of object
         private String FileName;
@@ -15,7 +15,7 @@
 
         
         // constructor
-        public TextAnalysis1(String sourceFileName, int maxNoOfWords) {
+        public TextAnalysis(String sourceFileName, int maxNoOfWords) {
             this.FileName = sourceFileName;
             this.maxWords = maxNoOfWords;
             this.ArrayOfWords = getStringFromFile();
