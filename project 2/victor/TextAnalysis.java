@@ -14,10 +14,10 @@ public class TextAnalysis{
     ArrayList<String> words = new ArrayList<String>();
     public static void main(String[] args){
 
-        TextAnalysis ta = new TextAnalysis("hamlet.txt",1000);
-        // System.out.println(ta.wordCount());
-        // System.out.println(ta.getNoOfDifferentWords());
-        System.out.println(ta.getNoOfRepetitions());
+        TextAnalysis ta = new TextAnalysis("hamlet.txt", 50);
+		System.out.println("word count = " + ta.wordCount());
+		System.out.println("different words = " + ta.getNoOfDifferentWords());
+		System.out.println("repetitions = " + ta.getNoOfRepetitions());
     }
     // constructor of the class
     public TextAnalysis(String sourceFileName, int maxNoOfWords) {
@@ -40,14 +40,14 @@ public class TextAnalysis{
                 // Reads next byte from the input stream
                 i = buffer.read();
                 if (i==-1){
-                    Matcher m = Pattern.compile("(\\b[^\\s]+\\b)").matcher(text_chunk);
+                    Matcher m = Pattern.compile("([a-zA-Z]+)").matcher(text_chunk);
                     while(m.find()){
                         // a list of words and unique words are made here such that 
                         // the whole document wont have to searched again. 
-                        words.add(m.group(0));
+                        words.add(m.group(0).toLowerCase());
                         // using LinkedHashSet since you cant add the same entry twice
                         // making for a nice implementation of storing only unique words.
-                        unique_words.add(m.group(0));
+                        unique_words.add(m.group(0).toLowerCase());
                         counter++;
                     }
                 }
@@ -66,7 +66,7 @@ public class TextAnalysis{
         if(unique_words.size() <= 0){
             wordCount();
         }
-        return unique_words.size()+1;
+        return unique_words.size();
     }
 
     public int getNoOfRepetitions(){
@@ -76,7 +76,7 @@ public class TextAnalysis{
         }
         int counter=0;
             for (int i = 0; i < words.size()-1; i++) {
-                if(words.get(i).equals(words.get(i+1))){
+                if(words.get(i).equalsIgnoreCase(words.get(i+1))){
                     counter++;
                 }
             }
