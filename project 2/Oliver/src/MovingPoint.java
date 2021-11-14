@@ -11,7 +11,7 @@ public class MovingPoint {
         this.y = 0;
     }
     
-    
+    // Constructor for assigning values to all fields
     public MovingPoint(double x, double y, double direction, double speed){
         this.x = x;
         this.y=y;
