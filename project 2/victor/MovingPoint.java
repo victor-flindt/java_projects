@@ -41,7 +41,7 @@ public class MovingPoint {
             this.direction = (this.direction) % 360;
         }
     }
-    public void move (double duration){
+    public void move(double duration){
         double distance = speed*duration;
         x=x+(distance*(Math.cos(direction*(Math.PI/180))));
         y=y+(distance*(Math.sin(direction*(Math.PI/180))));
