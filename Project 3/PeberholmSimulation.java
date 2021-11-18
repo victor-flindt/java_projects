@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 public class PeberholmSimulation {
 
 	private int steps;
-	private static ArrayList<Plant> plants; // Array containg the plants
+	private static ArrayList<Plant> plants; // Array containg the p	lants
 	private static boolean[][] occupied;
 	private static JFrame jf;
 	private static Random rand = new Random();

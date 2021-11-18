@@ -8,6 +8,8 @@ public class Moss extends Plant
 		// get the variables from the other files.
         super(position,PeberholmConstantsAndUtilities.MOSS_COLOR,PeberholmConstantsAndUtilities.MOSS_RANGE,PeberholmConstantsAndUtilities.MOSS_SEED_NO);
     }
+	// default constructor
+	public Moss(){}
 
 	// Getter methods
 	public Color getColor(){
@@ -30,7 +32,7 @@ public class Moss extends Plant
 			// for loop for seeds seeds
 			for(int i = 0; i< newPlantsToAdd.length; i++){
 
-				Moss PlantToAdd = new Moss(position); // find lige ud af hvorfor man ikke kan init. en class inde i sigselv. 
+				Moss PlantToAdd = new Moss(PeberholmConstantsAndUtilities.getLegalRandomPosition()); // find lige ud af hvorfor man ikke kan init. en class inde i sigselv. 
 				
 				// Find position for new plant
 				PlantToAdd.setPosition(position.x + PeberholmConstantsAndUtilities.getRandomIntBetween(-Range, Range), 

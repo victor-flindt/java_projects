@@ -6,7 +6,7 @@ public class PeberholmConstantsAndUtilities {
 	
 	//CONSTANTS
     // set to true for viewing
-	public static final boolean SHOW = false;
+	public static final boolean SHOW = true;
 	
 	public static final int W = 80;//Rows
 	public static final int H = 40;//Columns

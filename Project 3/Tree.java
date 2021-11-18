@@ -8,6 +8,8 @@ public class Tree extends Plant
 		// get the variables from the other files.
         super(position,PeberholmConstantsAndUtilities.TREE_COLOR,PeberholmConstantsAndUtilities.TREE_RANGE,PeberholmConstantsAndUtilities.TREE_SEED_NO);
     }
+	// Default constructor
+	public Tree(){}
 
 	// Getter methods
 	public Color getColor(){
@@ -30,7 +32,7 @@ public class Tree extends Plant
 			// for loop for seeds seeds
 			for(int i = 0; i< newPlantsToAdd.length; i++){
 
-				Tree PlantToAdd = new Tree(position); // find lige ud af hvorfor man ikke kan init. en class inde i sigselv. 
+				Tree PlantToAdd = new Tree(PeberholmConstantsAndUtilities.getLegalRandomPosition()); // find lige ud af hvorfor man ikke kan init. en class inde i sigselv. 
 				
 				// Find position for new plant
 				PlantToAdd.setPosition(position.x + PeberholmConstantsAndUtilities.getRandomIntBetween(-Range, Range), 
